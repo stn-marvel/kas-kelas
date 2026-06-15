@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CekInKas — Tambah Transaksi</title>
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="futuristic">
+  <nav class="navbar">
+    <div>Tambah Transaksi</div>
+    <a href="buku-kas.html">Batal</a>
+  </nav>
+
+  <main class="container">
+    <form id="formTransaksi" class="card">
+      <label for="tipe">Tipe</label>
+      <select id="tipe" required>
+        <option value="pemasukan">Pemasukan</option>
+        <option value="pengeluaran">Pengeluaran</option>
+      </select>
+
+      <label for="kategori">Kategori</label>
+      <select id="kategori" required>
+        <option value="iuran">Iuran</option>
+        <option value="denda">Denda</option>
+        <option value="donasi">Donasi</option>
+        <option value="lainnya">Lainnya</option>
+      </select>
+
+      <div id="dynamicFields"></div>
+
+  <label for="tanggal">Tanggal</label>
+  <input id="tanggal" type="date" />
+
+      <label for="nominal">Nominal (Rp)</label>
+      <input id="nominal" type="number" required />
+
+      <label for="deskripsi">Deskripsi (opsional)</label>
+      <input id="deskripsi" />
+
+      <div class="form-row">
+        <button class="btn-primary" type="submit">Simpan</button>
+        <a class="btn-secondary" href="buku-kas.html">Batal</a>
+      </div>
+    </form>
+  </main>
+
+  <script type="module" src="js/tambah-transaksi.js"></script>
+</body>
+</html>

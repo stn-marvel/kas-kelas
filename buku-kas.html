@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CekInKas — Buku Kas</title>
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="futuristic">
+  <nav class="navbar">
+    <div style="display:flex;align-items:center;gap:12px;">
+  <a class="btn-primary btn-small" href="admin-dashboard.html" title="Kembali">← Kembali</a>
+      <div>Buku Kas</div>
+    </div>
+    <a href="index.html" id="logout">Logout</a>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2>Filter</h2>
+      <label>Tipe:
+        <select id="filterTipe">
+          <option value="">Semua</option>
+          <option value="pemasukan">Pemasukan</option>
+          <option value="pengeluaran">Pengeluaran</option>
+        </select>
+      </label>
+
+      <label>Kategori:
+        <select id="filterKategori">
+          <option value="">Semua</option>
+          <option value="iuran">Iuran</option>
+          <option value="denda">Denda</option>
+          <option value="donasi">Donasi</option>
+          <option value="lainnya">Lainnya</option>
+        </select>
+      </label>
+
+      <a class="btn-primary" href="tambah-transaksi.html">Tambah Transaksi</a>
+    </section>
+
+    <section class="card table-wrap">
+      <table class="table">
+        <thead>
+          <tr><th>No</th><th>Tanggal</th><th>Tipe</th><th>Kategori</th><th>Nominal</th><th>Absen</th><th>Alasan</th><th>Deskripsi</th><th>Aksi</th></tr>
+        </thead>
+        <tbody id="tabel-transaksi">
+          <tr><td colspan="9">Memuat...</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="js/buku-kas.js"></script>
+</body>
+</html>

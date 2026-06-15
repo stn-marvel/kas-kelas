@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CekinKas — Dashboard Admin</title>
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="futuristic">
+  <nav class="navbar">
+    <div>Selamat datang, Bendahara!</div>
+    <a href="index.html" id="logout">Logout</a>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2>Cari Iuran Siswa</h2>
+      <div class="search-row">
+        <input id="cariAbsen" placeholder="Masukkan no absen" />
+        <button id="btnCari" class="btn-primary">Cari</button>
+      </div>
+      <div id="hasilCari"></div>
+    </section>
+
+    <section class="card">
+      <h2>5 Transaksi Terbaru</h2>
+      <div id="listTerbaru">Memuat...</div>
+    </section>
+
+    <section class="card">
+      <h2>Data Kas</h2>
+      <div class="chart-wrap">
+        <canvas id="chartPie" aria-label="Grafik pemasukan dan pengeluaran" role="img"></canvas>
+        <div class="chart-loader" aria-hidden="true">
+          <div class="spinner"></div>
+        </div>
+      </div>
+      <div>Saldo: <strong id="saldo">Rp0</strong></div>
+      <a class="btn-secondary" href="buku-kas.html">Buka Buku Kas</a>
+    </section>
+  </main>
+  <script type="module" src="index.js"></script>
+  <script type="module" src="js/admin-dashboard.js"></script>
+</body>
+</html>

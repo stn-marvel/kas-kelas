@@ -1,0 +1,12 @@
+{
+  "name": "cekin-kas-scripts",
+  "version": "1.0.0",
+  "description": "Utility scripts for CekInKas",
+  "main": "scripts/rebuild_kas.js",
+  "scripts": {
+    "rebuild-kas": "node scripts/rebuild_kas.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.5.0"
+  }
+}

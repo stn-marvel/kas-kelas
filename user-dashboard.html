@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CekinKas — Dashboard Siswa</title>
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="futuristic">
+  <nav class="navbar">
+    <div id="namaUser">Halo, Siswa</div>
+    <a href="index.html" id="logout">Logout</a>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2>Informasi Iuran</h2>
+      <label for="semesterSelect">Semester</label>
+      <select id="semesterSelect">
+        <option value="1">Semester 1</option>
+        <option value="2">Semester 2</option>
+      </select>
+
+      <div class="summary">
+        <div>Total Dibayar: <strong id="totalDibayar">Rp0</strong></div>
+        <div>Sisa: <strong id="sisa">Rp0</strong></div>
+        <div>Persentase: <strong id="persen">0%</strong></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Riwayat Transaksi</h2>
+      <div id="riwayatList">Memuat...</div>
+    </section>
+
+    <section class="card">
+      <h2>Data Kas Kelas</h2>
+      <canvas id="chartPie" width="300" height="300"></canvas>
+      <div>Saldo: <strong id="saldo">Rp0</strong></div>
+    </section>
+  </main>
+
+  <script type="module" src="index.js"></script>
+  <script type="module" src="js/user-dashboard.js"></script>
+</body>
+</html>

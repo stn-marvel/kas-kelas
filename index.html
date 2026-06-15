@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CekinKas — Login</title>
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="center futuristic">
+    <div class="container card layout">
+      <header class="hero">
+        <div class="brand">
+          <div>
+            <h1 class="site-title">CekinKas</h1>
+            <p class="tag">Sepuluh Dua</p>
+          </div>
+        </div>
+        <nav class="hero-nav" aria-label="Top Navigation">
+          <a class="muted" href="buku-kas.html">Buku Kas</a>
+          <a class="muted" href="admin-dashboard.html">Admin</a>
+        </nav>
+      </header>
+
+      <section class="split">
+        <aside class="panel info">
+          <h2>Selamat datang di</h2>
+          <p>Website baru, portal digital kas X-2</p>
+          <ul>
+            <li>Update kas real-time</li>
+            <li>Transparansi keuangan</li>
+            <li>Keamanan via Firebase</li>
+          </ul>
+        </aside>
+
+        <div class="panel form-panel">
+          <form id="loginForm" class="login-form" autocomplete="on">
+            <div class="role-toggle" role="tablist" aria-label="Pilih peran">
+              <label class="role">
+                <input type="radio" name="role" value="user" checked />
+                <span>Siswa</span>
+              </label>
+              <label class="role">
+                <input type="radio" name="role" value="admin" />
+                <span>Admin</span>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label for="username">Nomor Absen / Username</label>
+              <input id="username" name="username" required inputmode="text" placeholder="Masukkan nomor absen atau username" />
+            </div>
+
+            <div class="form-row">
+              <label for="password">Password</label>
+              <input id="password" name="password" type="password" required placeholder="••••••••" />
+            </div>
+
+            <div class="form-row actions">
+              <button type="submit" class="btn-primary">Masuk</button>
+            </div>
+
+            <div class="muted note">Beritahu bendahara jika terdapat kendala</code></div>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer muted">Properti Digital Milik Sepuluh Dua</footer>
+    </div>
+  </main>
+
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
